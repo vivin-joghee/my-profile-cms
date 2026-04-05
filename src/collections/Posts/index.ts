@@ -72,6 +72,13 @@ export const Posts: CollectionConfig<'posts'> = {
       required: true,
     },
     {
+      name: 'intro',
+      type: 'textarea',
+      admin: {
+        description: 'Short description shown on the blog card (1-2 sentences)',
+      },
+    },
+    {
       type: 'tabs',
       tabs: [
         {

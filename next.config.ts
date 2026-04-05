@@ -39,6 +39,9 @@ const nextConfig: NextConfig = {
 
     return webpackConfig
   },
+  sassOptions: {
+    silenceDeprecations: ['legacy-js-api'],
+  },
   reactStrictMode: true,
   redirects,
   turbopack: {

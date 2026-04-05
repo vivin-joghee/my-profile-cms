@@ -61,7 +61,12 @@ export default buildConfig({
     url: process.env.DATABASE_URL || '',
   }),
   collections: [Pages, Posts, Media, Categories, Users],
-  cors: [getServerSideURL()].filter(Boolean),
+  cors: [
+    getServerSideURL(),
+    'http://localhost:5000',
+    'http://127.0.0.1:5500',
+    'https://vivinjoghee.github.io',
+  ].filter(Boolean),
   globals: [Header, Footer],
   plugins,
   secret: process.env.PAYLOAD_SECRET,
